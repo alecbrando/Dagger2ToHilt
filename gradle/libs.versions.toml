@@ -1,0 +1,82 @@
+[versions]
+## SDK versions
+libVersion = "0.0.1"
+minSdk = "24"
+targetSdk = "31"
+compileSdk = "33"
+
+## Dependency versions
+core-ktx = "1.8.0"
+app-compat = "1.4.1"
+dagger = "2.40.1"
+dagger-hilt = "2.44.2"
+room = "2.4.0"
+retrofit = "2.9.0"
+gson = "2.8.8"
+constraint = "2.1.1"
+lifecycle = "2.4.0"
+fragment = "1.4.0"
+
+[libraries]
+androidx-core = { module = "androidx.core:core-ktx", version.ref = "core-ktx" }
+appcompat-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "app-compat" }
+dagger-dagger = { module = "com.google.dagger:dagger", version.ref = "dagger" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "dagger" }
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+dagger-hilt-android = { module = "com.google.dagger:hilt-android", version.ref = "dagger-hilt" }
+dagger-hilt-compiler = { module = "com.google.dagger:hilt-android-compiler", version.ref = "dagger-hilt" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
+moshi-retrofit = { module = "com.squareup.retrofit2:converter-moshi", version.ref= "retrofit" }
+gson = { module = "com.google.code.gson:gson", version.ref = "gson" }
+gson-convertor = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
+constraint = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraint" }
+fragment-ktx = { module = "androidx.fragment:fragment-ktx", version.ref = "fragment" }
+lifecycle-viewmodel-ktx = { module = "androidx.lifecycle:lifecycle-viewmodel-ktx", version.ref = "lifecycle" }
+
+[bundles]
+test-logic = [
+]
+
+test-instrumentation = [
+
+]
+
+main = [
+    "androidx-core",
+    "appcompat-appcompat",
+    "dagger-hilt-android",
+    "fragment-ktx",
+]
+
+kapt = [
+    "dagger-hilt-compiler"
+]
+
+network = [
+    "androidx-core",
+    "appcompat-appcompat",
+#    "dagger-dagger",
+#    "dagger-hilt-android",
+    "retrofit",
+    "gson",
+    "gson-convertor",
+]
+
+database = [
+    "androidx-core",
+    "appcompat-appcompat",
+    "room-runtime",
+#    "dagger-hilt-android",
+    "constraint",
+    "lifecycle-viewmodel-ktx",
+    "fragment-ktx"
+]
+
+hilt = [
+    "dagger-hilt-compiler"
+]
+
+room = [
+    "room-compiler",
+]
