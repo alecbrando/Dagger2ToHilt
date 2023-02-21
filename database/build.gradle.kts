@@ -43,8 +43,6 @@ dependencies {
         exclude(group = "com.intellij", module = "annotations")
     }
     implementation(projects.network)
-//    kapt(libs.bundles.hilt)
     kapt(libs.bundles.room)
-    implementation("com.google.dagger:hilt-android:2.45")
-    kapt("com.google.dagger:hilt-android-compiler:2.45")
+    kapt(libs.bundles.hilt)
 }

@@ -36,6 +36,4 @@ android {
 dependencies {
     api(libs.bundles.network)
     kapt(libs.bundles.hilt)
-    implementation("com.google.dagger:hilt-android:2.45")
-    kapt("com.google.dagger:hilt-android-compiler:2.45")
 }

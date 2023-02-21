@@ -64,7 +64,6 @@ class MainActivity : AppCompatActivity() {
     private fun callApi() = lifecycleScope.launch {
         val data = repository.getTodo()
         Todo(
-            id = data.id,
             title = data.title,
             completed = data.completed,
             userId = data.userId

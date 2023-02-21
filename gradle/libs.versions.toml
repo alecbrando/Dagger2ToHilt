@@ -9,7 +9,7 @@ compileSdk = "33"
 core-ktx = "1.8.0"
 app-compat = "1.4.1"
 dagger = "2.40.1"
-dagger-hilt = "2.44.2"
+dagger-hilt = "2.45"
 room = "2.4.0"
 retrofit = "2.9.0"
 gson = "2.8.8"
@@ -47,17 +47,15 @@ main = [
     "appcompat-appcompat",
     "dagger-hilt-android",
     "fragment-ktx",
-]
-
-kapt = [
-    "dagger-hilt-compiler"
+    "dagger-hilt-android",
+    #    "dagger-dagger",
 ]
 
 network = [
     "androidx-core",
     "appcompat-appcompat",
 #    "dagger-dagger",
-#    "dagger-hilt-android",
+    "dagger-hilt-android",
     "retrofit",
     "gson",
     "gson-convertor",
@@ -67,7 +65,7 @@ database = [
     "androidx-core",
     "appcompat-appcompat",
     "room-runtime",
-#    "dagger-hilt-android",
+    "dagger-hilt-android",
     "constraint",
     "lifecycle-viewmodel-ktx",
     "fragment-ktx"
